@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Pravin Dagde" />
+        <base href="/">
+
+        <title>Pravin Dagde</title>
+
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+        <link rel="stylesheet" href="css/swipebox.css">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+
+	<script src="libs/angular/angular.min.js"></script>
+        <script src="libs/angular-route/angular-route.min.js"></script>
+        <script src="js/modules/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/modules//move-top.js"></script>
+        <script type="text/javascript" src="js/modules/easing.js"></script>
+        <script type="text/javascript" src="libs/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+
+
+ <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+        <!-- ANGULAR CUSTOM -->
+        <script src="js/controllers/MainCtrl.js"></script>
+        <script src="js/controllers/ProfileCtrl.js"></script>
+        <script src="js/services/ProfileService.js"></script>
+
+
+        <script src="js/Travel/js/TravelCtrl.js"></script>
+
+        <script src="js/appRoutes.js"></script>
+        <script src="js/app.js"></script>
+
+        <!-- custom js here -->
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <script type="text/javascript">
+                        jQuery(document).ready(function($) {
+                                $(".scroll").click(function(event){
+                                        event.preventDefault();
+                                        $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                                });
+                        });
+        </script>
+
+
+
+
+ <!--web-fonts-->
+        <link href='//fonts.googleapis.com/css?family=Overlock:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body ng-app="sampleApp" ng-controller="MainController">
+        <!-- header -->
+
+
+
+        <div class="header show-on-scroll">
+                <nav class="navbar navbar-fixed-top" style="background-color: #009688">
+                        <div class="navbar-header pull-left" >
+                                <a class="navbar-brand" href="/home" style="color: #ffffff">Home</a>
+                        </div>
+                        <div class="navbar-header pull-left">
+                                <a class="navbar-brand" href="/" style="color: #ffffff">Profile</a>
+                        </div>
+                        <div class="navbar-header pull-left">
+                                <a class="navbar-brand" href="/travel" style="color: #ffffff">Photo</a>
+                        </div>
+                        <div class="navbar-header pull-right">
+                                <a class="navbar-brand" href="#contact" style="color: #ffffff">Contact</a>
+                        </div>
+                </nav>
+        </div>
+        <!-- //header -->
+        <div ng-view class="view">
+
+ </div>
+
+
+
+
+        <!--contact -->
+        <div class="welcome contact" id="contact" ng-if="showContact">
+                <div class="container">
+                        <h3 class="title">Contact Me</h3>
+
+                        <div class="contact-row">
+                                <div class="col-md-6 contact-left">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d578.0347734671828!2d77.6272785223972!3d12.937327244924784!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x715d9f2b8f6f4d88!2sSony+World!5e0!3m2!1sen!2sin!4v1465722623504" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>
+                                <div class="col-md-6 contact-right">
+                                        <div class="address-left">
+                                                <p>{{address.street}}<br> {{address.state}} </p>
+                                        </div>
+                                        <div class="address-right">
+                                                <p>Call us :  {{phone}}</p>
+                                                <p>E-mail : <a href="mailto:{{mail}}">{{mail}}</a></p>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="contact-form">
+                                                <form >
+                                                        <input type="text" placeholder="Name"  ng-model="myname">
+                                                        <input class="email" name="Email" type="text" placeholder="Email" required="">
+                                                        <input class="phone" name="phone" type="text" placeholder="Phone" required="">
+                                                        <textarea name="Message" placeholder="Message" required=""></textarea>
+                                                        <md-button class="md-primary md-raised center-block" ng-click="ComingSoon($event)"   >
+                                                                Submit
+
+
+
+ </md-button>
+                                                </form>
+                                        </div>
+                                </div>
+                                <div class="clearfix"></div>
+                        </div>
+                </div>
+        </div>
+        <!--//contact -->
+        <!--footer-->
+        <div class="footer">
+                <div class="container">
+                        <p>
+                                <span class="falinks">
+                                        <a href="{{social.linkedin}}" style="color: #265a88"><i class="fa fa-linkedin" ></i></a>
+                                        <a href="{{social.twitter}}" style="color: #00b3ee"><i class="fa fa-twitter"></i></a>
+                                        <a href="{{social.skype}}" style="color: #00b3ee"><i class="fa fa-skype"></i></a>
+                                        <a href="{{social.github}}"><i class="fa fa-github" style="color:#ffffff"></i></a>
+                                        <a href="https://www.instagram.com/pravindagde/?hl=en"><i class="fa fa-instagram" style="color: deeppink"></i></a>
+
+                                </span>
+                        </p>
+                </div>
+        </div>
+        <!--//footer-->
+
+
+
+</body>
+</html>
+
