@@ -61,7 +61,7 @@
 
 </head>
 
-<body ng-app="sampleApp" ng-controller="MainController">
+<body ng-app="sampleApp" ng-controller="MainController" style="background-color: #E6E6FF">
         <!-- header -->
 
 
@@ -111,9 +111,9 @@
                                         <div class="contact-form">
                                                 <form >
                                                         <input type="text" placeholder="Name"  ng-model="myname">
-                                                        <input class="email" name="Email" type="text" placeholder="Email" required="">
-                                                        <input class="phone" name="phone" type="text" placeholder="Phone" required="">
-                                                        <textarea name="Message" placeholder="Message" required=""></textarea>
+                                                        <input class="email" name="Email" type="text" placeholder="Email" required="" ng-model="Email">
+                                                        <input class="phone" name="phone" type="text" placeholder="Phone" required="" ng-model="Phone">
+                                                        <textarea name="Message" placeholder="Message" required="" ng-model="Message"></textarea>
                                                         <md-button class="md-primary md-raised center-block" ng-click="ComingSoon($event)"   >
                                                                 Submit
 

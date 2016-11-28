@@ -92,7 +92,7 @@ angular.module('ProfileCtrl', ['ngSanitize']).controller('ProfileController', fu
 		title: 'Android App Development ',
 		value: '82%'
 	}, {
-		title: 'Scripting - Node.JS/Shell',
+		title: 'Scripting - Node.JS/AngularJS/Ionic/JavaScript/Shell',
 		value: '78%'
 	}, {
 		title: 'HTML/CSS',
