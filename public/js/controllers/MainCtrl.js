@@ -1,4 +1,4 @@
-angular.module('MainCtrl', []).controller('MainController', function($scope,$mdDialog,$rootScope) {
+angular.module('MainCtrl', ['ui.bootstrap']).controller('MainController', function($scope,$mdDialog,$rootScope,$http) {
 
 
 	$scope.social = {
@@ -8,26 +8,41 @@ angular.module('MainCtrl', []).controller('MainController', function($scope,$mdD
 		github: 'https://github.com/pdagde'
 	};
 	$scope.phone = '+91 9689055690';
-	$scope.address = {street: 'Koramangala, Bangalore - 560047', state: 'KA, India.'};
+	$scope.address = {street: 'Koramangala, Bangalore - 560047', state: 'Karnataka, India.'};
 	$scope.mail = 'pravin.dagde@gmail.com';
     $rootScope.showContact=true;
-	$scope.ComingSoon = function(ev) {
+
+	$scope.ComingSoon = function(details) {
+
+          $scope.details = {
+			   name : details.name,
+          	   email : details.email,
+			   phone : details.phone,
+			   message : details.message
+		     }
+
+			$http.post('/patient',$scope.details).success(function(result){
+
+				refresh();
+			})
 
 
-		console.log($scope.myname);
-		// Appending dialog to document.body to cover sidenav in docs app
-		// Modal dialogs should fully cover application
-		// to prevent interaction outside of dialog
 		$mdDialog.show(
 			$mdDialog.alert()
 				.parent(angular.element(document.querySelector('#popupContainer')))
 				.clickOutsideToClose(true)
-				.title('Under Construction')
-				.textContent('Its lot of work..!stay tune..!')
+				.title('Thanks'+ " " + details.name)
+				.textContent('Giving your thought')
 				.ariaLabel('Site is under construction')
-				.ok('ookchaa.!!')
-				.targetEvent(ev)
+				.ok('ok')
 		);
+
+
+
+		// Appending dialog to document.body to cover sidenav in docs app
+		// Modal dialogs should fully cover application
+		// to prevent interaction outside of dialog
+
 	};
 });
 
