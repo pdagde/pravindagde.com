@@ -35,7 +35,8 @@ require('./app/routes')(app); // pass our application into our routes
 
 
 app.post('/patient',function(req,res){
-    console.log('calling post api');
+
+   /* console.log('calling post api');
 
     console.log("details",req.body);
 
@@ -77,7 +78,7 @@ app.post('/patient',function(req,res){
 
         }else{
         }
-    });
+    });*/
 });
 
 
