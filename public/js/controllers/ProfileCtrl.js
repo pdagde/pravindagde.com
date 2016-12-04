@@ -3,7 +3,7 @@ angular.module('ProfileCtrl', ['ngSanitize']).controller('ProfileController', fu
 	$rootScope.showContact=true;
 	$scope.name = 'Pravin Laxman Dagde';
 	$scope.title = 'SOFTWARE DEVELOPER,BANGALORE';
-	$scope.dob = '13-03-1991';
+	$scope.dob = '13-03-1990';
 	$scope.phone = '+91 9689055690';
 	$scope.address = {street: 'Koramangala, Bangalore - 560047', state: 'KARNATAKA, India.'};
 	$scope.mail = 'pravin.dagde@gmail.com';
