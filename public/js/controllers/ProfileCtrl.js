@@ -35,11 +35,8 @@ angular.module('ProfileCtrl', ['ngSanitize']).controller('ProfileController', fu
 		year: '1 June 2015 - 21 December 2015 ',
 		company: ' SAP LAB INDIA PVT.LTD, PUNE',
 		role: ' Software Developer',
-		description: '<p>Designed & Developed scalable App application to build digital platform ' +
-		'for healthcare industry.' +
-		' Designed, Developed And Test Android App for Pharmacies to Order Medicine from Suppliers.,' +
-		' to facilitate Demilitarized zone, and proactively enforce security measures.</p>' +
-		'<p>Technologies used: Android, Ionic Framework, Mongo DB, Node.JS, AngularJS, ElasticSearch, Nginx, ELK stack.'
+		description: '<p>Writing a shell scipt for running Quasar,DbTest,Hana </p>'+
+		'<p> Manually and Atomedet Testing HANA product .</p>'
 	},{
 		year: 'July 2016 - Present ',
 		company: ' Medibox Technologies LLP, Bangalore',
