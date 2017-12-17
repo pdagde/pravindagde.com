@@ -30,62 +30,6 @@ app.use(express.static(__dirname + '/public')); // set the static files location
 
 // routes ==================================================
 require('./app/routes')(app); // pass our application into our routes
-
-//////////////////////////////////////////add//////////
-
-
-app.post('/patient',function(req,res){
-
-   /* console.log('calling post api');
-
-    console.log("details",req.body);
-
-    var nodemailer = require("nodemailer");
-    var mail_details = {
-        "service": "Gmail",
-        "auth": {
-            "user": "pravin.dagde.web@gmail.com",// You need to allow this mail id to use as less secure by setting it ON.You will get mail from google of this to edit security.
-            "pass": "Pravin@123"
-        }
-    }
-    var smtpTransport = nodemailer.createTransport(mail_details);
-
-
-
-    var mailOptions = {
-        to: "pravin.dagde@gmail.com", // list of receivers
-        subject: req.body.email + " " + req.body.phone + " " + "FROM WEB ", // Subject line
-        text:req.body.message,
-        file : ""
-    };
-
-    var replayview = {
-        to: req.body.email, // list of receivers
-        subject: "Thank You" + " "+req.body.name + " "+"for Submitting Your Thought ON Pravin Dagde's profile", // Subject line
-        text:" I am glad for submitting your view in my personal website. i always remain you in my whole life Thanks ones again",
-        file : ""
-    };
-
-    smtpTransport.sendMail(mailOptions, function(error, response){
-        if(error){
-
-        }else{
-             }
-    });
-
-    smtpTransport.sendMail(replayview, function(error, response){
-        if(error){
-
-        }else{
-        }
-    });*/
-});
-
-
-///////////
-
-
-
 // start app ===============================================
 app.listen(port);	
 console.log('Server started on port ' + port); 			// shoutout to the user
